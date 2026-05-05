@@ -1,0 +1,57 @@
+{
+  "recent": [
+    {
+      "providerID": "deepseek",
+      "modelID": "deepseek-v4-flash"
+    },
+    {
+      "providerID": "deepseek",
+      "modelID": "deepseek-v4-pro"
+    },
+    {
+      "providerID": "pc-lmstudio",
+      "modelID": "gemma-4-26b-a4b"
+    },
+    {
+      "providerID": "pc-lmstudio",
+      "modelID": "gemma-4-e4b"
+    },
+    {
+      "providerID": "ollama-cloud",
+      "modelID": "gemma4:31b"
+    },
+    {
+      "providerID": "ollama-cloud",
+      "modelID": "qwen3.5:397b"
+    },
+    {
+      "providerID": "ollama-cloud",
+      "modelID": "qwen3-coder:480b"
+    },
+    {
+      "providerID": "ollama-cloud",
+      "modelID": "qwen3-coder-next"
+    },
+    {
+      "providerID": "ollama-cloud",
+      "modelID": "minimax-m2.5"
+    },
+    {
+      "providerID": "opencode",
+      "modelID": "minimax-m2.5-free"
+    }
+  ],
+  "favorite": [],
+  "variant": {
+    "ollama-cloud/gemma4:31b": "high",
+    "ollama-cloud/qwen3.5:397b": "default",
+    "ollama-cloud/qwen3-coder:480b": "default",
+    "ollama-cloud/qwen3-coder-next": "default",
+    "ollama-cloud/minimax-m2.5": "default",
+    "pc-lmstudio/gemma-4-e4b": "Assistant",
+    "pc-lmstudio/gemma-4-26b-a4b": "default",
+    "deepseek/deepseek-v4-pro": "max",
+    "deepseek/deepseek-v4-flash": "max",
+    "opencode/minimax-m2.5-free": "default"
+  }
+}

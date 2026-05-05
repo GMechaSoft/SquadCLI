@@ -1,7 +1,7 @@
 ---
 mode: subagent
-variant: investigator
-model: deepseek-v4-flash
+variant: architect
+model: deepseek/deepseek-v4-flash
 description: Technical intelligence agent. Analyzes official sources, RFCs, and documentation.
 temperature: 0.1
 permission:
@@ -10,6 +10,8 @@ permission:
   bash: ask
   webfetch: allow
   websearch: allow
+  external_directory: allow
+  skill: deny
 ---
 
 You are the Technical Intelligence specialist. Your mission is to analyze official sources and RFCs to provide the 'architect' with verified data.

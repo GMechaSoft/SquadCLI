@@ -22,17 +22,17 @@
         "gemma-4-26b-a4b": {
           "name": "gemma 4 26b a4b",
           "variants": {
-            "Architect": {
+            "architect": {
               "reasoningEffort": "high",
               "textVerbosity": "high",
               "reasoningSummary": "detailed"
             },
-            "Coder": {
+            "developer": {
               "reasoningEffort": "medium",
               "textVerbosity": "low",
               "reasoningSummary": "none"
             },
-            "Assistant": {
+            "assistant": {
               "reasoningEffort": "low",
               "textVerbosity": "high",
               "reasoningSummary": "none"
@@ -42,17 +42,17 @@
         "gemma-4-e4b": {
           "name": "gemma 4 e4b",
           "variants": {
-            "Architect": {
+            "architect": {
               "reasoningEffort": "high",
               "textVerbosity": "high",
               "reasoningSummary": "detailed"
             },
-            "Coder": {
+            "developer": {
               "reasoningEffort": "medium",
               "textVerbosity": "low",
               "reasoningSummary": "none"
             },
-            "Assistant": {
+            "assistant": {
               "reasoningEffort": "low",
               "textVerbosity": "high",
               "reasoningSummary": "none"

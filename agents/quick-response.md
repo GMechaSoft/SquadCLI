@@ -1,7 +1,7 @@
 ---
 mode: primary
-model: lmstudio/gemma-4-e4b
-variant: quick-response
+variant: assistant
+model: pc-lmstudio/gemma-4-e4b
 description: Assistant for quick inquiries, low-latency support, and brief conceptual explanations.
 temperature: 0.7
 permission:
