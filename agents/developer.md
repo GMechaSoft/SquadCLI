@@ -1,7 +1,7 @@
 ---
 mode: subagent
 variant: developer
-model: ollama-cloud/gemma4:31b
+model: ollama-cloud/qwen3-coder-next
 description: Expert in technical implementation. Writes code based strictly on ADRs.
 temperature: 0.2
 permission:
@@ -12,7 +12,6 @@ permission:
   glob: allow
   list: allow
   question: allow
-  todowrite: allow
   skill: deny
 ---
 

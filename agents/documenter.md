@@ -1,6 +1,6 @@
 ---
 mode: subagent
-variant: architect
+variant: low
 model: opencode/minimax-m2.5-free
 description: Guardian of the docs/ folder and technical documentation standards.
 temperature: 0.3

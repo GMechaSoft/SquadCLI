@@ -6,15 +6,15 @@ This repository contains the official specialized agent configurations and gover
 
 The core suite of agents includes:
 
-- **Architect-Developer:** The primary orchestrator and governance enforcer. **Does not perform direct execution (edit/bash: deny) to ensure strict delegation and oversight.**
-- **Architect:** Specialized in system design and feasibility validation.
-- **Developer:** Focuses on clean, idiomatic implementation based strictly on ADRs.
-- **Documenter:** Maintains ADRs and technical contracts within the `docs/` folder.
-- **Investigator:** Technical intelligence specialist for analyzing official sources and RFCs.
-- **Prompt Optimizer:** Refines agent interactions for maximum efficiency. **Enabled for codebase context analysis (grep/glob: allow).**
-- **Quick Response:** Handles rapid conceptual inquiries. **Read-only (edit: deny) to prevent accidental modifications.**
-- **Explore:** Fast, read-only codebase exploration and pattern discovery.
-- **General:** Multi-step task execution (research, maintenance). **Must adhere to the Atomic Cycle for any implementation.**
+- **Architect-Developer:** The primary orchestrator and governance enforcer. **Powered by Gemini 3.1 Pro** for maximum reasoning. Restricted permissions (edit/bash: deny) to ensure strict oversight.
+- **Architect:** Specialized in macro-architecture and design auditing. **Powered by Gemini 3.1 Pro** for high-fidelity technical evaluation.
+- **Developer:** Technical executor focusing on clean, idiomatic implementation. **Powered by Qwen 3 Coder Next** for state-of-the-art coding logic.
+- **Documenter:** Maintains ADRs and technical contracts using **Minimax (Zen)** to preserve premium quotas.
+- **Investigator:** Technical intelligence specialist for analyzing official sources using **Gemini 2.5 Flash Lite** (100% free quota).
+- **Prompt Optimizer:** Refines agent interactions locally via **Gemma 4**. Enabled for codebase context analysis (grep/glob: allow).
+- **Quick Response:** Handles rapid conceptual inquiries locally via **Gemma 4**. Read-only (edit: deny).
+- **Explore:** Fast codebase exploration using **Gemini 3.1 Flash Lite** (2M token window, 100% free quota).
+- **General:** Multi-step task execution (research, maintenance) using **Minimax (Zen)** as a quota buffer.
 
 All agents follow the **Agent Governance Framework** (see `AGENTS.md`).
 
@@ -23,6 +23,9 @@ All agents follow the **Agent Governance Framework** (see `AGENTS.md`).
 ```text
 .
 ├── agents/             # Agent definition files
+├── docs/
+│   ├── adr/            # Architectural Decision Records
+│   └── reports/        # Infrastructure and model reports
 ├── AGENTS.md           # Governance Framework
 ├── opencode.json       # Tool and provider configuration
 └── README.md           # This file
@@ -55,16 +58,15 @@ All agents follow the **Agent Governance Framework** (see `AGENTS.md`).
 
 (`—` = inherits global default, `ext_dir` = external_directory)
 
-## 📦 Change Log
+## 🔄 Model Failover Protocol (Quota Management)
 
-| Date | Change |
-|------|--------|
-| 2026-05-04 | **Governance Hardening:** Restricted `architect-developer` and `quick-response` permissions. |
-| 2026-05-04 | **Model Agnosticism:** Removed model-specific instructions from agent prompts. |
-| 2026-05-04 | **Atomic Cycle Enforcement:** Updated `general` agent to strictly follow the Design -> ADR -> Implementation flow. |
-| 2026-05-04 | **Optimizer Context:** Enabled `grep` and `glob` for `prompt-optimizer`. |
-| 2026-05-04 | Updated `agents/architect.md` — model changed from `deepseek-v4-pro` to `deepseek-v4-flash`. |
-| 2026-05-04 | Created `agents/explore.md` and `agents/general.md`. |
+When primary `Gemini Pro` quotas are exhausted, transition to the following secondary providers (using `variant: medium` for optimization):
+
+- **Critical (Orchestration):** Switch `Architect-Developer` from `Gemini Pro` to `deepseek/deepseek-v4-pro` (`medium`).
+- **Secondary (Auditing):** Switch `Architect` from `Gemini Pro` to `deepseek/deepseek-v4-flash` (`medium`).
+- **General/Support:** Maintain standard free-quota providers (Minimax, Gemini Flash Lite) as primary.
+
+*Always verify quota status before switching.*
 
 ---
 *Official OpenCode Configuration Repository.*

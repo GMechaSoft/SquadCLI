@@ -1,7 +1,7 @@
 ---
 mode: subagent
-variant: architect
-model: deepseek/deepseek-v4-flash
+variant: low
+model: google/gemini-2.5-flash-lite
 description: Technical intelligence agent. Analyzes official sources, RFCs, and documentation.
 temperature: 0.1
 permission:

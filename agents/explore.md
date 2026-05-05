@@ -1,7 +1,7 @@
 ---
 mode: subagent
-variant: medium
-model: deepseek/deepseek-v4-flash
+variant: low
+model: google/gemini-3.1-flash-lite-preview
 description: Fast, read-only agent for exploring codebases. Use this to quickly find files by patterns, search code for keywords, or answer questions about the codebase.
 temperature: 0.1
 permission:
