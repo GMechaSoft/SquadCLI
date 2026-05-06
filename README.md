@@ -60,13 +60,15 @@ All agents follow the **Agent Governance Framework** (see `AGENTS.md`).
 
 ## 🔄 Model Failover Protocol (Quota Management)
 
-When primary `Gemini Pro` quotas are exhausted, transition to the following secondary providers (using `variant: medium` for optimization):
+The system manages two types of quota behaviors:
+1.  **Transient (Flash/Lite):** Quotas for `Gemini Flash/Lite` models renew automatically after a cooling period. These remain the primary choice for high-volume, low-cost tasks.
+2.  **Persistent (Pro):** Quotas for `Gemini Pro` models do **not** renew automatically without a paid plan. 
 
-- **Critical (Orchestration):** Switch `Architect-Developer` from `Gemini Pro` to `deepseek/deepseek-v4-pro` (`medium`).
-- **Secondary (Auditing):** Switch `Architect` from `Gemini Pro` to `deepseek/deepseek-v4-flash` (`medium`).
-- **General/Support:** Maintain standard free-quota providers (Minimax, Gemini Flash Lite) as primary.
+**Transition Protocol (when Pro quota = 0%):**
+- **Permanent Switch:** Transition `Architect-Developer` and `Architect` to `deepseek/deepseek-v4-pro` and `deepseek/deepseek-v4-flash` respectively, using the **`medium`** variant.
+- **Maintenance:** Standard free-quota providers (Minimax, Gemini Flash Lite) continue to handle general and exploratory tasks.
 
-*Always verify quota status before switching.*
+*Note: Verify model availability in `model-reference.json` before manual configuration.*
 
 ---
 *Official OpenCode Configuration Repository.*

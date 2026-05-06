@@ -30,7 +30,9 @@ We have established a "Model Tiering" and "Provider Diversification" strategy fo
 *   **Qwen 3 Coder Next:** Remains the choice for the developer role for its specialized focus on repository-level coding.
 
 ### B. Cost Efficiency & Quota Management
-*   **Google Gemini (Lite versions):** Utilized for high-volume read tasks (Explore, Investigator) to leverage the 100% free daily quotas.
+*   **Google Gemini (Lite versions):** Utilized for high-volume read tasks (Explore, Investigator) to leverage the 100% free daily quotas, which renew automatically.
+*   **Gemini Pro Quota:** Recognized as a "one-time" resource for the free tier; exhaustion is persistent without a paid plan.
+*   **DeepSeek Failover:** Formalized as the primary high-reasoning fallback for `Architect-Developer` and `Architect` once Gemini Pro is unavailable. We use the **`medium`** variant to balance performance and cost.
 *   **Minimax (Zen):** Integrated as a primary resource for documentation and general tasks to preserve Google and DeepSeek quotas for more critical reasoning tasks.
 
 ### C. System Resilience (Multi-Provider)
