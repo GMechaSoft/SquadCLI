@@ -1,4 +1,4 @@
-# ADR 001: Agent-Based Specialization vs. Skills
+# ADR 0001: Agent-Based Specialization vs. Skills
 
 ## Status
 Accepted

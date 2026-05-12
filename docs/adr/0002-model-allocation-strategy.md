@@ -1,4 +1,4 @@
-# ADR 002: Model Allocation Strategy (May 2026)
+# ADR 0002: Model Allocation Strategy (May 2026)
 
 ## Status
 Accepted
